@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-<link rel="stylesheet" href="/css/blog.css" />
+<link rel="stylesheet" href="../css/blog.css" />
 
   </head>
   <body>
@@ -19,12 +19,12 @@
 	</nav>
 	<div class="post-list">
 		
-		  <a class="allstyle 1 " href="/1/2015/08/13/hello.html">
+		  <a class="allstyle 1 " href="/blog/1/2015/08/13/hello.html">
 			  <span>hello</span>
 			  <span>Aug 2015</span>
 		  </a>
 		
-		  <a class="allstyle 2 " href="/2/2014/01/15/general-html-resources.html">
+		  <a class="allstyle 2 " href="/blog/2/2014/01/15/general-html-resources.html">
 			  <span>HTML 常用资源</span>
 			  <span>Jan 2014</span>
 		  </a>
@@ -246,12 +246,12 @@ Bob--&gt;Alice: I am good thanks!
 	
 	<button id='postsizebtn' class="btnposition"></button>
 	
-	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
-<script src="/js/jquery.pjax.js"></script>
-<script src="/js/blog.js"></script>
+	<script src="../js/jquery-2.0.3.min.js"></script>
+<script src="../js/jquery.pjax.js"></script>
+<script src="../js/blog.js"></script>
 <script>
-	/* $(document).pjax('.post-list', '#post', 
-	  { fragment: '#post', timeout: 10000 }); */
+	 $(document).pjax('.allstyle', '#post', 
+	  { fragment: '#post', timeout: 10000 }); 
 </script>
   </body>
 </html>
