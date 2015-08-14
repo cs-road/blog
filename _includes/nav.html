@@ -11,7 +11,7 @@
 	</nav>
 	<div class="post-list">
 		{% for post in site.posts %}
-		  <a class="allstyle {{ post.category }} " href="/blog/{{ post.url }}">
+		  <a class="allstyle {{ post.category }} " href="/blog{{ post.url }}">
 			  <span>{{ post.title }}</span>
 			  <span>{{ post.date | date: "%b %Y" }}</span>
 		  </a>
