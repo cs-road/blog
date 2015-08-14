@@ -1,0 +1,20 @@
+<div class="sidebar" >
+	<nav id="article-category">
+		<ul>
+			<li id="allstyle">全部</li>
+			<li id="1">文章分类1</li>
+			<li id="2">文章分类2</li>
+			<li id="3">文章分类3</li>
+			<li id="4">文章分类4</li>
+			<li id="5">文章分类5</li>				
+		</ul>
+	</nav>
+	<div class="post-list">
+		{% for post in site.posts %}
+		  <a class="allstyle {{ post.category }} " href="{{ post.url }}">
+			  <span>{{ post.title }}</span>
+			  <span>{{ post.date | date: "%b %Y" }}</span>
+		  </a>
+		{% endfor %}
+	</div>
+</div>

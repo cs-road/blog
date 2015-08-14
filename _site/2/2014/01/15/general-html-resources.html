@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="/css/blog.css" />
+
+  </head>
+  <body>
+    <div class="sidebar" >
+	<nav id="article-category">
+		<ul>
+			<li id="allstyle">全部</li>
+			<li id="1">文章分类1</li>
+			<li id="2">文章分类2</li>
+			<li id="3">文章分类3</li>
+			<li id="4">文章分类4</li>
+			<li id="5">文章分类5</li>				
+		</ul>
+	</nav>
+	<div class="post-list">
+		
+		  <a class="allstyle 1 " href="/1/2015/08/13/hello.html">
+			  <span>hello</span>
+			  <span>Aug 2015</span>
+		  </a>
+		
+		  <a class="allstyle 2 " href="/2/2014/01/15/general-html-resources.html">
+			  <span>HTML 常用资源</span>
+			  <span>Jan 2014</span>
+		  </a>
+		
+	</div>
+</div>
+   
+   <div id="post">     
+        <article class="post-content">
+		  <h1 id="post__title">HTML 常用资源</h1>
+		  <h2 id="section">常用属性</h2>
+
+<h3 id="linkmediascreen">在link中可能会出现media=screen的情况</h3>
+<p>这个属性是确定在哪种情况下使用这个link的css文件，screen是指输出到屏幕，而print用于打印</p>
+
+<h3 id="metaviewport">在meta中增加viewport选项</h3>
+<p>viewport的作用是告诉浏览器，目前的装置情况。</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width;initial-scale=1.0"&gt;
+</code></pre>
+
+<ul>
+  <li>width:数字或device-width   设置宽度</li>
+  <li>height:数字或device-width    设置高度</li>
+  <li>initial-scale:最小0.25，最大5   初始缩放</li>
+  <li>minimum-scale:最小0.25，最大5   最小缩放</li>
+  <li>maximum-scale:最小0.25，最大5   最大缩放</li>
+  <li>user-scalable:1或0(yes or no)  是否允许用户缩放</li>
+</ul>
+
+		</article>
+    </div> <!-- end #post -->
+	
+	<button id='postsizebtn' class="btnposition"></button>
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script src="/js/jquery.pjax.js"></script>
+<script src="/js/blog.js"></script>
+<script>
+	/* $(document).pjax('.post-list', '#post', 
+	  { fragment: '#post', timeout: 10000 }); */
+</script>
+  </body>
+</html>

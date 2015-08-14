@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    {% include nav.html %}
+   
+   <div id="post">     
+        <article class="post-content">
+		  <h1 id="post__title">{{ page.title }}</h1>
+		  {{ content }}
+		</article>
+    </div> <!-- end #post -->
+	
+	<button id='postsizebtn' class="btnposition"></button>
+	
+	{% include footer.html %}
+  </body>
+</html>

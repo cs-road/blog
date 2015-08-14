@@ -1,0 +1,132 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+html,body{	
+	height: 100%;
+	width:100%;
+}
+
+@font-face {
+	  font-family: 'ture font';
+	  src: url('true font/True Lies.ttf');
+	  font-weight: normal;
+	  font-style: normal;
+}
+   
+::-webkit-scrollbar{  
+	width: 16px;  
+	height: 16px;  
+	background-color: transparent;  
+}  
+
+::-webkit-scrollbar-thumb  {  
+	border-radius: 10px;  
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+	background-color: #555;  
+} 
+
+.sidebar{
+	height:100%;
+	width: 204px;
+	float: left;
+	transition: margin-left 0.5s;
+}
+.post{
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.post-content:hover{
+	border:2px solid blue;
+	border-shadow:0 0 3px;
+}
+
+#article-category{
+	float: left;
+	height: 100%;
+	width: 104px;
+	background-color: blue;
+}
+.post-list{
+	float: left;
+	height: 100%;
+	width: 100px;
+	background-color: green;
+	overflow-y: auto;
+	
+}
+.post-list a{
+	display: block;
+	width: 84px;
+}
+.post-content{
+	margin: 0 auto;	
+	padding: 50px 0;
+	box-sizing: border-box;
+	font-family: ture font;
+	border: 2px solid gray;
+	transition: border 2s;
+	max-width: 800px;
+	width:80%;
+}
+
+.btnposition{
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	outline: none;
+	border: none;
+}
+
+.btnposition:hover{			
+	margin-top: -5px;
+}
+
+.btnposition:before{
+	content:'全屏';
+}
+
+.hidesidebar{
+	margin-left: -207px;
+}
+
+@media screen and (max-width: 768px){
+	
+	.sidebar{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		overflow-y: hidden;
+		
+	}
+	#article-category{
+		width: 100%;
+		height: 146px;
+		
+	}	
+	
+	.post-list{
+		position: absolute;
+		top: 146px;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: auto;
+		overflow-y: auto;
+	}
+	
+	.hidesidebar{
+		margin-left: -100%;	
+	}
+
+	.windowchangehidesidebar{
+		left: -100%;	
+	}
+}
