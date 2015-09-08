@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include header.html %}
+    {% include head.html %}
   </head>
   <body>
-    {% include nav.html %}
-   
-   <div id="post">    
-        <article class="post-content">
-		  <h1 id="post__title">{{ page.title }}</h1>
-		  {{ content }}
-		</article>
-    </div> <!-- end #post -->
-	
-	<button id='postsizebtn' class="btnposition"></button>
-	
-	{% include footer.html %}
+  <div class="wrapper">
+	<i  class="fa fa-navicon fa-lg contentsizeicon fullnav  fa-border"></i>
+		{% include nav.html %}
+	   
+	    <div id="post">    
+			<article class="post-content">
+			  <h1 id="post__title">{{ page.title }}</h1>
+			  {{ content }}
+			</article>
+		 </div> <!-- end #post -->
+		
+		{% include footer.html %}
+		  
+
+	</div>
   </body>
 </html>

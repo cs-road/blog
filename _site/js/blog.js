@@ -14,7 +14,8 @@ $("#postsizebtn").bind("click",function(){
 
 $('#article-category ul').bind("click",function(event){
 		$('.allstyle').hide();
-		$('.'+$(event.target).attr('id')).delay(50).fadeIn();
+		$('#'+$(event.target).attr('id')+' .post-list').delay(50).fadeIn();
+		alert('#'+$(event.target).attr('id')+' .post-list');
 });
 
 var postlistclickhandler = function anoymous (){		
