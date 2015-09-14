@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include head.html %}
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="/blog/css/blog-1.css" />
+	<link rel="stylesheet" href="/blog/css/font-awesome.min.css" />
   </head>
+  
   <body>
-  <div class="wrapper">
-	<i  class="fa fa-navicon fa-lg contentsizeicon fullnav  fa-border"></i>
-		{% include nav.html %}
-	   
-	    <div id="post">    
-			<article class="post-content">
-			  <h1 id="post__title">{{ page.title }}</h1>
-			  {{ content }}
-			</article>
-		 </div> <!-- end #post -->
-		
-		{% include footer.html %}
-		  
-
+	<div class="wrapper">	
 	</div>
+	
+	<script type="text/template" id="allpostinfo-template">
+		<aside class="sidebar">
+			<i id="nav-showsidebar" class="fa fa-navicon fa-lg   fa-border"></i>
+			<div id="closebtn-hidesidebar"><i  class="fa fa-close fa-lg "></i>	</div>
+			<div class="avatrbox">
+				<div class="avatrwrapper">
+					<a class="avatar" >
+						<img src="/blog/images/road-avatar2.png"  />
+					</a>
+				</div>
+			</div>
+			
+			<nav id="article-category">					
+				<ul>
+					<% _.each(allpostinfo,function(typeinfo){ %>
+						<li id="<%= typeinfo.type %>" class="category">
+							<%= typeinfo.type %>
+							<div class="post-list">
+								<% _.each(typeinfo.postlist,function(postlist){ %>
+										<a class="allstyle <%= typeinfo.type %> " href="#post/<%= postlist.title %>">
+										  <span style="border:5px solid white;border-radius:5px;display:inline-block;height:0px;width:0px;"></span>
+										  <span><%= postlist.title %></span>
+										  <span style="float: right"><%= postlist.time %></span>
+										</a>
+								<% }) %>
+					<% }) %>
+						
+				</ul> 
+			</nav>
+		</aside>	
+    </script>
+	<script type="text/template" id="post-template">		 
+			<article class="post-content">
+			  <h1 id="post__title"><%= title %></h1>
+			  <%= content %>
+			</article>		
+	</script>
+	<script src="/blog/js/jquery-2.0.3.min.js"></script>
+	<script src="/blog/js/underscore.js"></script>
+	<script src="/blog/js/backbone-min.js"></script>
+	<script src="/blog/js/app.js"></script>
   </body>
 </html>

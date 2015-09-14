@@ -26,7 +26,7 @@ html,body{
 
 body{
 	position: relative;	
-	display: none;
+	
 }
 
 h1{
@@ -38,6 +38,11 @@ h2{
 }
 
 .pc {	
+
+.aside-wrapper{
+	height: 100%;
+	float: left;
+}
 	.wrapper{
 		height: 100%;
 	}
@@ -180,31 +185,46 @@ h2{
 	}
 	
 	
-	.hidesidebar{
-		margin-left: -170px;
-	}
 	
-	.closebtn{
+	
+	#closebtn-hidesidebar{
 		flex: 0 0 36px;
 		background: #323950;
 		display: flex;
 		justify-content: flex-end;
+		
 	}
-	.closebtn i{
+	#closebtn-hidesidebar i{
 		margin-right: 10px;
 		margin-top: 10px;
+		color: white;
 	}
 	
-	.fullnav{
+	#closebtn-hidesidebar i:hover{
+		cursor: pointer;
+	}
+	
+	#nav-showsidebar{
 		opacity: 0;
 		transform:translateX(20px);
 		
-		position: absolute;
+		position: fixed;
 		top: 12px;
 		left: 25px;
 	}
 	
-	.fullnavafterclick{
+	
+	
+	
+
+}
+
+.pc.fullscreen{
+	.sidebar{ 
+		 margin-left: -170px;
+	}
+	
+	#nav-showsidebar{ 
 		opacity: 1;
 		transform:translateX(0);
 		
@@ -212,7 +232,7 @@ h2{
 		cursor: pointer;
 		z-index: 1;
 		
-		position: absolute;
+		position: fixed;
 		top: 12px;
 		left: 25px;
 		
@@ -220,12 +240,11 @@ h2{
 		color: #323950;
 	}
 	
-	.fullnavafterclick:hover{
+	#nav-showsidebar:hover{
 		color: white;
 		background: #323950;
-		text-shadow: 0 0 2px ;
+		text-shadow: 0 0 2px  ;
 	}
-
 }	
 
 body.mobile{
@@ -238,7 +257,9 @@ body.mobile{
 
 .mobile {
 	
-	
+	.aside-wrapper{
+	height: 194px;
+}
 	.wrapper{
 		height: 100%;
 		overflow: scroll;
@@ -359,45 +380,19 @@ body.mobile{
 		color: black;
 	}
 		
-	.contentsizeicon{
-		
-		cursor: pointer;
-		color: #fff;
-	}
 	
-	.hidesidebar{
-		 /* transform: translateY(-194px); */
-		 margin-top: -194px;
-	}
 	
-	.fullnav{
+	
+	#nav-showsidebar{
 		opacity: 0;
 		transform:translateY(8px);		
-		position: absolute;
-		top: 12px;
-		right: 12px;
-	}
-	
-	.fullnavafterclick{
-		opacity: 1;
-		transform:translateY(0);
-		transition: transform 0.5s 0.3s, opacity 0.5s 0.3s;
-		cursor: pointer;
-		z-index: 1;
-		
-		position: absolute;
+		position: fixed;
 		top: 12px;
 		right: 12px;
 		
-		border: 1px solid #323950;
-		color: #323950;
 	}
 	
-	.fullnavafterclick:hover{
-		color: white;
-		background: #323950;
-		text-shadow: 0 0 2px ;
-	}
+	
 	
 	::-webkit-scrollbar{  
 		width: 2px;  
@@ -410,11 +405,41 @@ body.mobile{
 		-webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.3);  
 		background-color: transparent;  
 	} 
-	.closebtn{
+	#closebtn-hidesidebar{
 		float:right;
-		margin:8px 12px;
+		padding:8px 12px;
+	}
+	#closebtn-hidesidebar:hover{
+		cursor: pointer;
 	}
 	
 	
 }
+
+.mobile.fullscreen{
+	.sidebar{ 
+		 margin-top: -194px;
+	}
+	
+	#nav-showsidebar{
+		opacity: 1;
+		transform:translateY(0);
+		transition: transform 0.5s 0.3s, opacity 0.5s 0.3s;
+		cursor: pointer;
+		z-index: 1;
+		
+		position: fixed;
+		top: 12px;
+		right: 12px;
+		
+		border: 1px solid #323950;
+		color: #323950;
+	}
+	
+	#nav-showsidebar:hover{
+		color: white;
+		background: #323950;
+		text-shadow: 0 0 2px ;
+	}
+}	
 	
